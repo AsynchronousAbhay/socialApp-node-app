@@ -1,0 +1,12 @@
+<%- include('header')%>
+
+  <h1>update_user's-details</h1>
+  <form action="/update/<%= user._id%>" method="post">
+    <input type="text" placeholder="username" name="username" value="<%= user.username%>">
+    <input type="email" placeholder="email" name="email" value="<%= user.email%>">
+    <button>update</button>
+  </form>
+
+  <a href="/profile/<%= user.username%>">back to the profile</a>
+
+<%- include('footer')%>
